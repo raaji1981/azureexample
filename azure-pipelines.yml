@@ -2,6 +2,18 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+parameters:
+  - name: configuration
+    displayName: Configuration
+    type: string
+    default: development
+    values:
+    - development
+    - demo
+    - staging
+    - production
+
+
 
 trigger:
 - main
